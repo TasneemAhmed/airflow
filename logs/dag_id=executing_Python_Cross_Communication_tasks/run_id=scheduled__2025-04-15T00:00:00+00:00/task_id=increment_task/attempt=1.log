@@ -1,0 +1,18 @@
+[2025-04-16T11:53:16.955+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T11:53:16.962+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_Cross_Communication_tasks.increment_task scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-16T11:53:16.966+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_Cross_Communication_tasks.increment_task scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-16T11:53:16.966+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-16T11:53:16.979+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): increment_task> on 2025-04-15 00:00:00+00:00
+[2025-04-16T11:53:16.981+0300] {standard_task_runner.py:72} INFO - Started process 55975 to run task
+[2025-04-16T11:53:16.984+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_Cross_Communication_tasks', 'increment_task', 'scheduled__2025-04-15T00:00:00+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/cross_task_communication.py', '--cfg-path', '/tmp/tmpt50lq4kz']
+[2025-04-16T11:53:16.986+0300] {standard_task_runner.py:105} INFO - Job 90: Subtask increment_task
+[2025-04-16T11:53:17.014+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_Cross_Communication_tasks.increment_task scheduled__2025-04-15T00:00:00+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-16T11:53:17.060+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_Cross_Communication_tasks' AIRFLOW_CTX_TASK_ID='increment_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-15T00:00:00+00:00'
+[2025-04-16T11:53:17.060+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T11:53:17.068+0300] {logging_mixin.py:190} INFO - Incrementing 1 by 1
+[2025-04-16T11:53:17.068+0300] {python.py:240} INFO - Done. Returned value was: 2
+[2025-04-16T11:53:17.081+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-16T11:53:17.082+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_Python_Cross_Communication_tasks, task_id=increment_task, run_id=scheduled__2025-04-15T00:00:00+00:00, execution_date=20250415T000000, start_date=20250416T085316, end_date=20250416T085317
+[2025-04-16T11:53:17.119+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-16T11:53:17.132+0300] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T11:53:17.138+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

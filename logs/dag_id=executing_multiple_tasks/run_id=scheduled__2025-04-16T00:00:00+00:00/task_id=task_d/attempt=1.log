@@ -1,0 +1,21 @@
+[2025-04-17T10:33:53.987+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-17T10:33:53.995+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_multiple_tasks.task_d scheduled__2025-04-16T00:00:00+00:00 [queued]>
+[2025-04-17T10:33:53.999+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_multiple_tasks.task_d scheduled__2025-04-16T00:00:00+00:00 [queued]>
+[2025-04-17T10:33:53.999+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-17T10:33:54.017+0300] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): task_d> on 2025-04-16 00:00:00+00:00
+[2025-04-17T10:33:54.019+0300] {standard_task_runner.py:72} INFO - Started process 240100 to run task
+[2025-04-17T10:33:54.022+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_multiple_tasks', 'task_d', 'scheduled__2025-04-16T00:00:00+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/execute_multiple_tasks.py', '--cfg-path', '/tmp/tmp46k9dav0']
+[2025-04-17T10:33:54.024+0300] {standard_task_runner.py:105} INFO - Job 191: Subtask task_d
+[2025-04-17T10:33:54.050+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_multiple_tasks.task_d scheduled__2025-04-16T00:00:00+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-17T10:33:54.100+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_multiple_tasks' AIRFLOW_CTX_TASK_ID='task_d' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-16T00:00:00+00:00'
+[2025-04-17T10:33:54.100+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-17T10:33:54.110+0300] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-17T10:33:54.110+0300] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', 'tmpnw_ytrgi.sh']
+[2025-04-17T10:33:54.114+0300] {subprocess.py:99} INFO - Output:
+[2025-04-17T10:33:54.115+0300] {subprocess.py:106} INFO - Task D has Completed!
+[2025-04-17T10:33:54.115+0300] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-17T10:33:54.137+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-17T10:33:54.137+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_multiple_tasks, task_id=task_d, run_id=scheduled__2025-04-16T00:00:00+00:00, execution_date=20250416T000000, start_date=20250417T073353, end_date=20250417T073354
+[2025-04-17T10:33:54.196+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-17T10:33:54.207+0300] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-17T10:33:54.221+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

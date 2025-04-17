@@ -1,0 +1,32 @@
+[2025-04-14T17:08:49.260+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T17:08:49.269+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_multiple_tasks.task_a manual__2025-04-14T14:08:46.358652+00:00 [queued]>
+[2025-04-14T17:08:49.274+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_multiple_tasks.task_a manual__2025-04-14T14:08:46.358652+00:00 [queued]>
+[2025-04-14T17:08:49.274+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-14T17:08:49.290+0300] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): task_a> on 2025-04-14 14:08:46.358652+00:00
+[2025-04-14T17:08:49.292+0300] {standard_task_runner.py:72} INFO - Started process 92974 to run task
+[2025-04-14T17:08:49.296+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_multiple_tasks', 'task_a', 'manual__2025-04-14T14:08:46.358652+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/execute_multiple_tasks.py', '--cfg-path', '/tmp/tmp68dfc_4m']
+[2025-04-14T17:08:49.298+0300] {standard_task_runner.py:105} INFO - Job 35: Subtask task_a
+[2025-04-14T17:08:49.338+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_multiple_tasks.task_a manual__2025-04-14T14:08:46.358652+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-14T17:08:49.408+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_multiple_tasks' AIRFLOW_CTX_TASK_ID='task_a' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T14:08:46.358652+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T14:08:46.358652+00:00'
+[2025-04-14T17:08:49.409+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T17:08:49.434+0300] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-14T17:08:49.434+0300] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', 'tmpluq67n8r.sh']
+[2025-04-14T17:08:49.440+0300] {subprocess.py:99} INFO - Output:
+[2025-04-14T17:08:49.450+0300] {subprocess.py:106} INFO - Task A has Started!
+[2025-04-14T17:08:49.451+0300] {subprocess.py:106} INFO - Task A is running iteration 1
+[2025-04-14T17:08:49.451+0300] {subprocess.py:106} INFO - Task A is running iteration 2
+[2025-04-14T17:08:49.451+0300] {subprocess.py:106} INFO - Task A is running iteration 3
+[2025-04-14T17:08:49.451+0300] {subprocess.py:106} INFO - Task A is running iteration 4
+[2025-04-14T17:08:49.452+0300] {subprocess.py:106} INFO - Task A is running iteration 5
+[2025-04-14T17:08:49.452+0300] {subprocess.py:106} INFO - Task A is running iteration 6
+[2025-04-14T17:08:49.452+0300] {subprocess.py:106} INFO - Task A is running iteration 7
+[2025-04-14T17:08:49.452+0300] {subprocess.py:106} INFO - Task A is running iteration 8
+[2025-04-14T17:08:49.452+0300] {subprocess.py:106} INFO - Task A is running iteration 9
+[2025-04-14T17:08:49.452+0300] {subprocess.py:106} INFO - Task A is running iteration 10
+[2025-04-14T17:08:49.453+0300] {subprocess.py:106} INFO - Task A has completed!
+[2025-04-14T17:08:49.453+0300] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-14T17:08:49.473+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T17:08:49.474+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_multiple_tasks, task_id=task_a, run_id=manual__2025-04-14T14:08:46.358652+00:00, execution_date=20250414T140846, start_date=20250414T140849, end_date=20250414T140849
+[2025-04-14T17:08:49.526+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-14T17:08:49.571+0300] {taskinstance.py:3901} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T17:08:49.578+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,21 @@
+[2025-04-16T18:00:27.699+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T18:00:27.708+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: environment_info.print_environment_info manual__2025-04-16T15:00:24.822343+00:00 [queued]>
+[2025-04-16T18:00:27.713+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: environment_info.print_environment_info manual__2025-04-16T15:00:24.822343+00:00 [queued]>
+[2025-04-16T18:00:27.714+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-16T18:00:27.727+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): print_environment_info> on 2025-04-16 15:00:24.822343+00:00
+[2025-04-16T18:00:27.730+0300] {standard_task_runner.py:72} INFO - Started process 208415 to run task
+[2025-04-16T18:00:27.774+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'environment_info', 'print_environment_info', 'manual__2025-04-16T15:00:24.822343+00:00', '--job-id', '164', '--raw', '--subdir', 'DAGS_FOLDER/test_python.py', '--cfg-path', '/tmp/tmpl2ww39r3']
+[2025-04-16T18:00:27.834+0300] {standard_task_runner.py:105} INFO - Job 164: Subtask print_environment_info
+[2025-04-16T18:00:28.173+0300] {task_command.py:467} INFO - Running <TaskInstance: environment_info.print_environment_info manual__2025-04-16T15:00:24.822343+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-16T18:00:28.301+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='environment_info' AIRFLOW_CTX_TASK_ID='print_environment_info' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T15:00:24.822343+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T15:00:24.822343+00:00'
+[2025-04-16T18:00:28.303+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T18:00:28.377+0300] {logging_mixin.py:190} INFO - Python executable: /usr/bin/python3
+[2025-04-16T18:00:28.378+0300] {logging_mixin.py:190} INFO - Python version: 3.10.12 (main, Feb  4 2025, 14:57:36) [GCC 11.4.0]
+[2025-04-16T18:00:28.378+0300] {logging_mixin.py:190} INFO - Site packages: ['/usr/local/lib/python3.10/dist-packages', '/usr/lib/python3/dist-packages', '/usr/lib/python3.10/dist-packages']
+[2025-04-16T18:00:28.380+0300] {logging_mixin.py:190} INFO - Pandas is not installed in this environment
+[2025-04-16T18:00:28.380+0300] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-16T18:00:28.390+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-16T18:00:28.390+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=environment_info, task_id=print_environment_info, run_id=manual__2025-04-16T15:00:24.822343+00:00, execution_date=20250416T150024, start_date=20250416T150027, end_date=20250416T150028
+[2025-04-16T18:00:28.447+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-16T18:00:28.462+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T18:00:28.463+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

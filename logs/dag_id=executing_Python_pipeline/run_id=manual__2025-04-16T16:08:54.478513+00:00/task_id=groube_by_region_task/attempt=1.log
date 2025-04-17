@@ -1,0 +1,23 @@
+[2025-04-16T19:09:05.359+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T19:09:05.371+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_pipeline.groube_by_region_task manual__2025-04-16T16:08:54.478513+00:00 [queued]>
+[2025-04-16T19:09:05.378+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_pipeline.groube_by_region_task manual__2025-04-16T16:08:54.478513+00:00 [queued]>
+[2025-04-16T19:09:05.379+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-16T19:09:05.397+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): groube_by_region_task> on 2025-04-16 16:08:54.478513+00:00
+[2025-04-16T19:09:05.401+0300] {standard_task_runner.py:72} INFO - Started process 238551 to run task
+[2025-04-16T19:09:05.405+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_pipeline', 'groube_by_region_task', 'manual__2025-04-16T16:08:54.478513+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/execute_python_pipeline.py', '--cfg-path', '/tmp/tmpayvh2ovp']
+[2025-04-16T19:09:05.407+0300] {standard_task_runner.py:105} INFO - Job 179: Subtask groube_by_region_task
+[2025-04-16T19:09:05.445+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_pipeline.groube_by_region_task manual__2025-04-16T16:08:54.478513+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-16T19:09:05.515+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_pipeline' AIRFLOW_CTX_TASK_ID='groube_by_region_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T16:08:54.478513+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T16:08:54.478513+00:00'
+[2025-04-16T19:09:05.516+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T19:09:05.538+0300] {logging_mixin.py:190} WARNING - /home/tasneemahmed24/airflow/dags/execute_python_pipeline.py:40 FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+[2025-04-16T19:09:05.565+0300] {logging_mixin.py:190} INFO -       region        bmi        age       charges
+0  northeast  29.181954  39.203077  13371.921736
+1  northwest  29.199387  39.263804  12468.875328
+2  southeast  33.322970  38.891008  14658.800787
+3  southwest  30.595780  39.406728  12295.839216
+[2025-04-16T19:09:05.568+0300] {python.py:240} INFO - Done. Returned value was: {"region":{"0":"northeast","1":"northwest","2":"southeast","3":"southwest"},"bmi":{"0":29.1819538462,"1":29.1993865031,"2":33.3229700272,"3":30.5957798165},"age":{"0":39.2030769231,"1":39.263803681,"2":38.8910081744,"3":39.4067278287},"charges":{"0":13371.92173572,"1":12468.8753277301,"2":14658.8007868937,"3":12295.8392162691}}
+[2025-04-16T19:09:05.583+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-16T19:09:05.584+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_Python_pipeline, task_id=groube_by_region_task, run_id=manual__2025-04-16T16:08:54.478513+00:00, execution_date=20250416T160854, start_date=20250416T160905, end_date=20250416T160905
+[2025-04-16T19:09:05.635+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-16T19:09:05.651+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T19:09:05.652+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

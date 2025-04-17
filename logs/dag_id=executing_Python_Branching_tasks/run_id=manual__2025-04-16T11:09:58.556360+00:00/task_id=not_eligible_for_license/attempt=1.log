@@ -1,0 +1,18 @@
+[2025-04-16T14:10:05.047+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T14:10:05.070+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_Branching_tasks.not_eligible_for_license manual__2025-04-16T11:09:58.556360+00:00 [queued]>
+[2025-04-16T14:10:05.086+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_Branching_tasks.not_eligible_for_license manual__2025-04-16T11:09:58.556360+00:00 [queued]>
+[2025-04-16T14:10:05.086+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-16T14:10:05.105+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): not_eligible_for_license> on 2025-04-16 11:09:58.556360+00:00
+[2025-04-16T14:10:05.110+0300] {standard_task_runner.py:72} INFO - Started process 113075 to run task
+[2025-04-16T14:10:05.114+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_Branching_tasks', 'not_eligible_for_license', 'manual__2025-04-16T11:09:58.556360+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/execute_branching.py', '--cfg-path', '/tmp/tmp4i29_vh6']
+[2025-04-16T14:10:05.116+0300] {standard_task_runner.py:105} INFO - Job 127: Subtask not_eligible_for_license
+[2025-04-16T14:10:05.154+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_Branching_tasks.not_eligible_for_license manual__2025-04-16T11:09:58.556360+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-16T14:10:05.208+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_Branching_tasks' AIRFLOW_CTX_TASK_ID='not_eligible_for_license' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T11:09:58.556360+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T11:09:58.556360+00:00'
+[2025-04-16T14:10:05.208+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T14:10:05.221+0300] {logging_mixin.py:190} INFO - Not eligible for driving license
+[2025-04-16T14:10:05.222+0300] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-16T14:10:05.225+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-16T14:10:05.226+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_Python_Branching_tasks, task_id=not_eligible_for_license, run_id=manual__2025-04-16T11:09:58.556360+00:00, execution_date=20250416T110958, start_date=20250416T111005, end_date=20250416T111005
+[2025-04-16T14:10:05.256+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-16T14:10:05.265+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T14:10:05.265+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,32 @@
+[2025-04-17T16:05:50.689+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-17T16:05:50.699+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_pipeline_using_variable.filtering.filter_by_southeast manual__2025-04-17T13:05:42.423164+00:00 [queued]>
+[2025-04-17T16:05:50.704+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_pipeline_using_variable.filtering.filter_by_southeast manual__2025-04-17T13:05:42.423164+00:00 [queued]>
+[2025-04-17T16:05:50.704+0300] {taskinstance.py:2867} INFO - Starting attempt 2 of 1
+[2025-04-17T16:05:50.715+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): filtering.filter_by_southeast> on 2025-04-17 13:05:42.423164+00:00
+[2025-04-17T16:05:50.718+0300] {standard_task_runner.py:72} INFO - Started process 392897 to run task
+[2025-04-17T16:05:50.722+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_pipeline_using_variable', 'filtering.filter_by_southeast', 'manual__2025-04-17T13:05:42.423164+00:00', '--job-id', '237', '--raw', '--subdir', 'DAGS_FOLDER/execute_branching_using_variable.py', '--cfg-path', '/tmp/tmp0fs0po55']
+[2025-04-17T16:05:50.723+0300] {standard_task_runner.py:105} INFO - Job 237: Subtask filtering.filter_by_southeast
+[2025-04-17T16:05:50.750+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_pipeline_using_variable.filtering.filter_by_southeast manual__2025-04-17T13:05:42.423164+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-17T16:05:50.795+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_pipeline_using_variable' AIRFLOW_CTX_TASK_ID='filtering.filter_by_southeast' AIRFLOW_CTX_EXECUTION_DATE='2025-04-17T13:05:42.423164+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-17T13:05:42.423164+00:00'
+[2025-04-17T16:05:50.796+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-17T16:05:50.818+0300] {logging_mixin.py:190} WARNING - /home/tasneemahmed24/airflow/dags/execute_branching_using_variable.py:63 FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+[2025-04-17T16:05:50.838+0300] {logging_mixin.py:190} INFO -       age     sex    bmi  children smoker     region     charges
+1      18    male  33.77         1     no  southeast   1725.5523
+2      28    male  33.00         3     no  southeast   4449.4620
+4      25    male  28.60         1     no  southeast   3366.6697
+7      31  female  25.74         0     no  southeast   3756.6216
+8      46  female  33.44         1     no  southeast   8240.5896
+...   ...     ...    ...       ...    ...        ...         ...
+1329   42  female  40.37         2    yes  southeast  43896.3763
+1333   51    male  30.03         1     no  southeast   9377.9047
+1336   57  female  25.74         2     no  southeast  12629.1656
+1341   18  female  36.85         0     no  southeast   1629.8335
+1345   18  female  36.85         0     no  southeast   1629.8335
+
+[367 rows x 7 columns]
+[2025-04-17T16:05:50.843+0300] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-17T16:05:50.846+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-17T16:05:50.846+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_Python_pipeline_using_variable, task_id=filtering.filter_by_southeast, run_id=manual__2025-04-17T13:05:42.423164+00:00, execution_date=20250417T130542, start_date=20250417T130550, end_date=20250417T130550
+[2025-04-17T16:05:50.908+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-17T16:05:50.916+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-17T16:05:50.916+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

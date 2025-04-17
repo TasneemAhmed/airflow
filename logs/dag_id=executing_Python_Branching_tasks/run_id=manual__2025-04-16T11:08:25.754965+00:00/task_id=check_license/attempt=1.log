@@ -1,0 +1,76 @@
+[2025-04-16T14:08:28.141+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T14:08:28.149+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_Branching_tasks.check_license manual__2025-04-16T11:08:25.754965+00:00 [queued]>
+[2025-04-16T14:08:28.155+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_Branching_tasks.check_license manual__2025-04-16T11:08:25.754965+00:00 [queued]>
+[2025-04-16T14:08:28.155+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-16T14:08:28.170+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): check_license> on 2025-04-16 11:08:25.754965+00:00
+[2025-04-16T14:08:28.172+0300] {standard_task_runner.py:72} INFO - Started process 112391 to run task
+[2025-04-16T14:08:28.175+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_Branching_tasks', 'check_license', 'manual__2025-04-16T11:08:25.754965+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/execute_branching.py', '--cfg-path', '/tmp/tmpbp0in6sy']
+[2025-04-16T14:08:28.177+0300] {standard_task_runner.py:105} INFO - Job 124: Subtask check_license
+[2025-04-16T14:08:28.220+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_Branching_tasks.check_license manual__2025-04-16T11:08:25.754965+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-16T14:08:28.282+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_Branching_tasks' AIRFLOW_CTX_TASK_ID='check_license' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T11:08:25.754965+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T11:08:25.754965+00:00'
+[2025-04-16T14:08:28.282+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T14:08:28.297+0300] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/tasneemahmed24/airflow/dags/execute_branching.py", line 15, in has_driving_license
+    return choice([True, False])
+NameError: name 'choice' is not defined
+[2025-04-16T14:08:28.301+0300] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=executing_Python_Branching_tasks, task_id=check_license, run_id=manual__2025-04-16T11:08:25.754965+00:00, execution_date=20250416T110825, start_date=20250416T110828, end_date=20250416T110828
+[2025-04-16T14:08:28.322+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-16T14:08:28.323+0300] {standard_task_runner.py:124} ERROR - Failed to execute job 124 for task check_license (name 'choice' is not defined; 112391)
+Traceback (most recent call last):
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/tasneemahmed24/airflow/dags/execute_branching.py", line 15, in has_driving_license
+    return choice([True, False])
+NameError: name 'choice' is not defined
+[2025-04-16T14:08:28.359+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-04-16T14:08:28.381+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T14:08:28.389+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

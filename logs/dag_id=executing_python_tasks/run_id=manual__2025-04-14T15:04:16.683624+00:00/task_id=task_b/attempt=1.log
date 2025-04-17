@@ -1,0 +1,18 @@
+[2025-04-14T18:04:23.076+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T18:04:23.098+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_python_tasks.task_b manual__2025-04-14T15:04:16.683624+00:00 [queued]>
+[2025-04-14T18:04:23.105+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_python_tasks.task_b manual__2025-04-14T15:04:16.683624+00:00 [queued]>
+[2025-04-14T18:04:23.106+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-14T18:04:23.125+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): task_b> on 2025-04-14 15:04:16.683624+00:00
+[2025-04-14T18:04:23.129+0300] {standard_task_runner.py:72} INFO - Started process 14917 to run task
+[2025-04-14T18:04:23.132+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_python_tasks', 'task_b', 'manual__2025-04-14T15:04:16.683624+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/execute_python_operator.py', '--cfg-path', '/tmp/tmpdw9j10dp']
+[2025-04-14T18:04:23.134+0300] {standard_task_runner.py:105} INFO - Job 51: Subtask task_b
+[2025-04-14T18:04:23.171+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_python_tasks.task_b manual__2025-04-14T15:04:16.683624+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-14T18:04:23.255+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_python_tasks' AIRFLOW_CTX_TASK_ID='task_b' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T15:04:16.683624+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T15:04:16.683624+00:00'
+[2025-04-14T18:04:23.256+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T18:04:23.273+0300] {logging_mixin.py:190} INFO - Hello, Tasneem Ahmed from Karachi!
+[2025-04-14T18:04:23.273+0300] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-14T18:04:23.278+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T18:04:23.278+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_python_tasks, task_id=task_b, run_id=manual__2025-04-14T15:04:16.683624+00:00, execution_date=20250414T150416, start_date=20250414T150423, end_date=20250414T150423
+[2025-04-14T18:04:23.316+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-14T18:04:23.334+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T18:04:23.335+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

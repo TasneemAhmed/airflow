@@ -1,0 +1,49 @@
+[2025-04-14T14:14:51.981+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T14:14:51.991+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_operator.log_sql_query manual__2025-04-14T11:14:45.822984+00:00 [queued]>
+[2025-04-14T14:14:51.996+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_operator.log_sql_query manual__2025-04-14T11:14:45.822984+00:00 [queued]>
+[2025-04-14T14:14:51.997+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-14T14:14:52.010+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): log_sql_query> on 2025-04-14 11:14:45.822984+00:00
+[2025-04-14T14:14:52.013+0300] {standard_task_runner.py:72} INFO - Started process 26229 to run task
+[2025-04-14T14:14:52.016+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'example_python_operator', 'log_sql_query', 'manual__2025-04-14T11:14:45.822984+00:00', '--job-id', '10', '--raw', '--subdir', '/home/tasneemahmed24/.local/lib/python3.10/site-packages/airflow/example_dags/example_python_operator.py', '--cfg-path', '/tmp/tmp2v1qpkf4']
+[2025-04-14T14:14:52.018+0300] {standard_task_runner.py:105} INFO - Job 10: Subtask log_sql_query
+[2025-04-14T14:14:52.053+0300] {task_command.py:467} INFO - Running <TaskInstance: example_python_operator.log_sql_query manual__2025-04-14T11:14:45.822984+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-14T14:14:52.118+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='example_python_operator' AIRFLOW_CTX_TASK_ID='log_sql_query' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T11:14:45.822984+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T11:14:45.822984+00:00'
+[2025-04-14T14:14:52.119+0300] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-14T14:14:52.119+0300] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-14T14:14:52.119+0300] {logging_mixin.py:190} INFO - Current task name:log_sql_query state:running start_date:2025-04-14 11:14:51.992341+00:00
+[2025-04-14T14:14:52.120+0300] {logging_mixin.py:190} INFO - Dag name:example_python_operator and current dag run status:running
+[2025-04-14T14:14:52.120+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T14:14:52.120+0300] {example_python_operator.py:68} INFO - Python task decorator query: /*
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+*/
+
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    name TEXT,
+    description TEXT
+)
+[2025-04-14T14:14:52.121+0300] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-14T14:14:52.124+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T14:14:52.125+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=example_python_operator, task_id=log_sql_query, run_id=manual__2025-04-14T11:14:45.822984+00:00, execution_date=20250414T111445, start_date=20250414T111451, end_date=20250414T111452
+[2025-04-14T14:14:52.145+0300] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-14T14:14:52.146+0300] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-14T14:14:52.146+0300] {logging_mixin.py:190} INFO - Dag name:example_python_operator queued_at:2025-04-14 11:14:45.908239+00:00
+[2025-04-14T14:14:52.146+0300] {logging_mixin.py:190} INFO - Task hostname:DESKTOP-1SBO1JU. operator:PythonOperator
+[2025-04-14T14:14:52.159+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-14T14:14:52.177+0300] {taskinstance.py:3901} INFO - 5 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T14:14:52.182+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

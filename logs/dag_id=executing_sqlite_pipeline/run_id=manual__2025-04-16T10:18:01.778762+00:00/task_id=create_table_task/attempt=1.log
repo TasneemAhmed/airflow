@@ -1,0 +1,36 @@
+[2025-04-16T13:18:04.316+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T13:18:04.330+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_sqlite_pipeline.create_table_task manual__2025-04-16T10:18:01.778762+00:00 [queued]>
+[2025-04-16T13:18:04.338+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_sqlite_pipeline.create_table_task manual__2025-04-16T10:18:01.778762+00:00 [queued]>
+[2025-04-16T13:18:04.338+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-16T13:18:04.359+0300] {taskinstance.py:2890} INFO - Executing <Task(SqliteOperator): create_table_task> on 2025-04-16 10:18:01.778762+00:00
+[2025-04-16T13:18:04.361+0300] {standard_task_runner.py:72} INFO - Started process 91577 to run task
+[2025-04-16T13:18:04.366+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_sqlite_pipeline', 'create_table_task', 'manual__2025-04-16T10:18:01.778762+00:00', '--job-id', '108', '--raw', '--subdir', 'DAGS_FOLDER/sql_operators.py', '--cfg-path', '/tmp/tmp9l00qnqj']
+[2025-04-16T13:18:04.368+0300] {standard_task_runner.py:105} INFO - Job 108: Subtask create_table_task
+[2025-04-16T13:18:04.416+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_sqlite_pipeline.create_table_task manual__2025-04-16T10:18:01.778762+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-16T13:18:04.496+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_sqlite_pipeline' AIRFLOW_CTX_TASK_ID='create_table_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T10:18:01.778762+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T10:18:01.778762+00:00'
+[2025-04-16T13:18:04.497+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T13:18:04.516+0300] {sql.py:266} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            age INTEGER,
+            email TEXT,
+            is_active BOOLEAN NOT NULL DEFAULT True,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+[2025-04-16T13:18:04.521+0300] {base.py:84} INFO - Retrieving connection 'my_sqlite_conn'
+[2025-04-16T13:18:04.546+0300] {base.py:84} INFO - Retrieving connection 'my_sqlite_conn'
+[2025-04-16T13:18:04.547+0300] {sql.py:542} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            age INTEGER,
+            email TEXT,
+            is_active BOOLEAN NOT NULL DEFAULT True,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );, parameters: None
+[2025-04-16T13:18:04.552+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-16T13:18:04.553+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_sqlite_pipeline, task_id=create_table_task, run_id=manual__2025-04-16T10:18:01.778762+00:00, execution_date=20250416T101801, start_date=20250416T101804, end_date=20250416T101804
+[2025-04-16T13:18:04.594+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-16T13:18:04.619+0300] {taskinstance.py:3901} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T13:18:04.627+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

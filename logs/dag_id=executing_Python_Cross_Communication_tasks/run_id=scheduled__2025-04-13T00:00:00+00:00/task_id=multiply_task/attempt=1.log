@@ -1,0 +1,18 @@
+[2025-04-14T18:38:10.846+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T18:38:10.858+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_Cross_Communication_tasks.multiply_task scheduled__2025-04-13T00:00:00+00:00 [queued]>
+[2025-04-14T18:38:10.865+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_Cross_Communication_tasks.multiply_task scheduled__2025-04-13T00:00:00+00:00 [queued]>
+[2025-04-14T18:38:10.865+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-14T18:38:10.880+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): multiply_task> on 2025-04-13 00:00:00+00:00
+[2025-04-14T18:38:10.882+0300] {standard_task_runner.py:72} INFO - Started process 28063 to run task
+[2025-04-14T18:38:10.886+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_Cross_Communication_tasks', 'multiply_task', 'scheduled__2025-04-13T00:00:00+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/cross_task_communication.py', '--cfg-path', '/tmp/tmpjfwbt_c7']
+[2025-04-14T18:38:10.887+0300] {standard_task_runner.py:105} INFO - Job 54: Subtask multiply_task
+[2025-04-14T18:38:10.919+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_Cross_Communication_tasks.multiply_task scheduled__2025-04-13T00:00:00+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-14T18:38:10.968+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_Cross_Communication_tasks' AIRFLOW_CTX_TASK_ID='multiply_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-13T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-13T00:00:00+00:00'
+[2025-04-14T18:38:10.969+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T18:38:10.983+0300] {logging_mixin.py:190} INFO - Multiplying 9 by 100
+[2025-04-14T18:38:10.983+0300] {python.py:240} INFO - Done. Returned value was: 900
+[2025-04-14T18:38:10.997+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T18:38:10.997+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_Python_Cross_Communication_tasks, task_id=multiply_task, run_id=scheduled__2025-04-13T00:00:00+00:00, execution_date=20250413T000000, start_date=20250414T153810, end_date=20250414T153810
+[2025-04-14T18:38:11.029+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-14T18:38:11.041+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T18:38:11.042+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

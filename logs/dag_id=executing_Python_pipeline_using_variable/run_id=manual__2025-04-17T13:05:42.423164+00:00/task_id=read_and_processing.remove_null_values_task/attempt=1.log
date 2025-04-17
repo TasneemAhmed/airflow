@@ -1,0 +1,32 @@
+[2025-04-17T16:05:46.686+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-17T16:05:46.694+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_pipeline_using_variable.read_and_processing.remove_null_values_task manual__2025-04-17T13:05:42.423164+00:00 [queued]>
+[2025-04-17T16:05:46.698+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_pipeline_using_variable.read_and_processing.remove_null_values_task manual__2025-04-17T13:05:42.423164+00:00 [queued]>
+[2025-04-17T16:05:46.699+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-17T16:05:46.713+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): read_and_processing.remove_null_values_task> on 2025-04-17 13:05:42.423164+00:00
+[2025-04-17T16:05:46.717+0300] {standard_task_runner.py:72} INFO - Started process 392816 to run task
+[2025-04-17T16:05:46.720+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_pipeline_using_variable', 'read_and_processing.remove_null_values_task', 'manual__2025-04-17T13:05:42.423164+00:00', '--job-id', '235', '--raw', '--subdir', 'DAGS_FOLDER/execute_branching_using_variable.py', '--cfg-path', '/tmp/tmpuh68ohny']
+[2025-04-17T16:05:46.722+0300] {standard_task_runner.py:105} INFO - Job 235: Subtask read_and_processing.remove_null_values_task
+[2025-04-17T16:05:46.756+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_pipeline_using_variable.read_and_processing.remove_null_values_task manual__2025-04-17T13:05:42.423164+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-17T16:05:46.811+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_pipeline_using_variable' AIRFLOW_CTX_TASK_ID='read_and_processing.remove_null_values_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-17T13:05:42.423164+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-17T13:05:42.423164+00:00'
+[2025-04-17T16:05:46.812+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-17T16:05:46.830+0300] {logging_mixin.py:190} WARNING - /home/tasneemahmed24/airflow/dags/execute_branching_using_variable.py:33 FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+[2025-04-17T16:05:46.856+0300] {logging_mixin.py:190} INFO -        age     sex     bmi  children smoker     region      charges
+0     19.0  female  27.900       0.0    yes  southwest  16884.92400
+1     18.0    male  33.770       1.0     no  southeast   1725.55230
+2     28.0    male  33.000       3.0     no  southeast   4449.46200
+4     25.0    male  28.600       1.0     no  southeast   3366.66970
+5     33.0    male  22.705       0.0     no  northwest  21984.47061
+...    ...     ...     ...       ...    ...        ...          ...
+1343  61.0  female  29.070       0.0    yes  northwest  29141.36030
+1344  18.0  female  31.920       0.0     no  northeast   2205.98080
+1345  18.0  female  36.850       0.0     no  southeast   1629.83350
+1346  21.0  female  25.800       0.0     no  southwest   2007.94500
+1348  42.0    male  35.120       0.0     no  southwest   5976.83110
+
+[1345 rows x 7 columns]
+[2025-04-17T16:05:46.872+0300] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-17T16:05:46.876+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-17T16:05:46.876+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_Python_pipeline_using_variable, task_id=read_and_processing.remove_null_values_task, run_id=manual__2025-04-17T13:05:42.423164+00:00, execution_date=20250417T130542, start_date=20250417T130546, end_date=20250417T130546
+[2025-04-17T16:05:46.905+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-17T16:05:46.922+0300] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-17T16:05:46.927+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

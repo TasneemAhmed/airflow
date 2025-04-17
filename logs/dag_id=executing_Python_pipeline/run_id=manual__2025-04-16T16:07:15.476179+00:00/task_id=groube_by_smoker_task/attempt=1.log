@@ -1,0 +1,21 @@
+[2025-04-16T19:07:25.545+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T19:07:25.561+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_Python_pipeline.groube_by_smoker_task manual__2025-04-16T16:07:15.476179+00:00 [queued]>
+[2025-04-16T19:07:25.571+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_Python_pipeline.groube_by_smoker_task manual__2025-04-16T16:07:15.476179+00:00 [queued]>
+[2025-04-16T19:07:25.571+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-16T19:07:25.588+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): groube_by_smoker_task> on 2025-04-16 16:07:15.476179+00:00
+[2025-04-16T19:07:25.593+0300] {standard_task_runner.py:72} INFO - Started process 237738 to run task
+[2025-04-16T19:07:25.597+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_Python_pipeline', 'groube_by_smoker_task', 'manual__2025-04-16T16:07:15.476179+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/execute_python_pipeline.py', '--cfg-path', '/tmp/tmpxwk1500n']
+[2025-04-16T19:07:25.599+0300] {standard_task_runner.py:105} INFO - Job 174: Subtask groube_by_smoker_task
+[2025-04-16T19:07:25.647+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_Python_pipeline.groube_by_smoker_task manual__2025-04-16T16:07:15.476179+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-16T19:07:25.735+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_Python_pipeline' AIRFLOW_CTX_TASK_ID='groube_by_smoker_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T16:07:15.476179+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T16:07:15.476179+00:00'
+[2025-04-16T19:07:25.736+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T19:07:25.766+0300] {logging_mixin.py:190} WARNING - /home/tasneemahmed24/airflow/dags/execute_python_pipeline.py:31 FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+[2025-04-16T19:07:25.804+0300] {logging_mixin.py:190} INFO -   smoker        bmi        age       charges
+0     no  30.656501  39.317119   8409.025939
+1    yes  30.672772  38.659420  31963.762697
+[2025-04-16T19:07:25.810+0300] {python.py:240} INFO - Done. Returned value was: {"smoker":{"0":"no","1":"yes"},"bmi":{"0":30.6565014032,"1":30.6727717391},"age":{"0":39.3171188026,"1":38.6594202899},"charges":{"0":8409.0259392133,"1":31963.7626972464}}
+[2025-04-16T19:07:25.822+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-16T19:07:25.823+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_Python_pipeline, task_id=groube_by_smoker_task, run_id=manual__2025-04-16T16:07:15.476179+00:00, execution_date=20250416T160715, start_date=20250416T160725, end_date=20250416T160725
+[2025-04-16T19:07:25.866+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-16T19:07:25.877+0300] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T19:07:25.878+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

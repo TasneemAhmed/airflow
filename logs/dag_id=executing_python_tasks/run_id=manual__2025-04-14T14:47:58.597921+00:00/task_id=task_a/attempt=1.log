@@ -1,0 +1,18 @@
+[2025-04-14T17:48:04.575+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T17:48:04.585+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_python_tasks.task_a manual__2025-04-14T14:47:58.597921+00:00 [queued]>
+[2025-04-14T17:48:04.590+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_python_tasks.task_a manual__2025-04-14T14:47:58.597921+00:00 [queued]>
+[2025-04-14T17:48:04.590+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-14T17:48:04.603+0300] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): task_a> on 2025-04-14 14:47:58.597921+00:00
+[2025-04-14T17:48:04.607+0300] {standard_task_runner.py:72} INFO - Started process 8567 to run task
+[2025-04-14T17:48:04.611+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_python_tasks', 'task_a', 'manual__2025-04-14T14:47:58.597921+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/execute_python_operator.py', '--cfg-path', '/tmp/tmpkku9s9x2']
+[2025-04-14T17:48:04.612+0300] {standard_task_runner.py:105} INFO - Job 43: Subtask task_a
+[2025-04-14T17:48:04.651+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_python_tasks.task_a manual__2025-04-14T14:47:58.597921+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-14T17:48:04.704+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_python_tasks' AIRFLOW_CTX_TASK_ID='task_a' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T14:47:58.597921+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T14:47:58.597921+00:00'
+[2025-04-14T17:48:04.705+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T17:48:04.717+0300] {logging_mixin.py:190} INFO - Task A has been executed!
+[2025-04-14T17:48:04.718+0300] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-14T17:48:04.721+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T17:48:04.722+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_python_tasks, task_id=task_a, run_id=manual__2025-04-14T14:47:58.597921+00:00, execution_date=20250414T144758, start_date=20250414T144804, end_date=20250414T144804
+[2025-04-14T17:48:04.753+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-14T17:48:04.779+0300] {taskinstance.py:3901} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T17:48:04.787+0300] {local_task_job_runner.py:245} INFO - ::endgroup::

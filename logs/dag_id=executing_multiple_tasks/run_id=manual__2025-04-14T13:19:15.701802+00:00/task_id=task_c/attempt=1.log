@@ -1,0 +1,22 @@
+[2025-04-14T16:19:29.518+0300] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T16:19:29.530+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: executing_multiple_tasks.task_c manual__2025-04-14T13:19:15.701802+00:00 [queued]>
+[2025-04-14T16:19:29.535+0300] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: executing_multiple_tasks.task_c manual__2025-04-14T13:19:15.701802+00:00 [queued]>
+[2025-04-14T16:19:29.536+0300] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-14T16:19:29.551+0300] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): task_c> on 2025-04-14 13:19:15.701802+00:00
+[2025-04-14T16:19:29.554+0300] {standard_task_runner.py:72} INFO - Started process 73990 to run task
+[2025-04-14T16:19:29.559+0300] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'executing_multiple_tasks', 'task_c', 'manual__2025-04-14T13:19:15.701802+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/execute_multiple_tasks.py', '--cfg-path', '/tmp/tmpfymt68cf']
+[2025-04-14T16:19:29.562+0300] {standard_task_runner.py:105} INFO - Job 30: Subtask task_c
+[2025-04-14T16:19:29.598+0300] {task_command.py:467} INFO - Running <TaskInstance: executing_multiple_tasks.task_c manual__2025-04-14T13:19:15.701802+00:00 [running]> on host DESKTOP-1SBO1JU.
+[2025-04-14T16:19:29.662+0300] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='tasneemahmed' AIRFLOW_CTX_DAG_ID='executing_multiple_tasks' AIRFLOW_CTX_TASK_ID='task_c' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T13:19:15.701802+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T13:19:15.701802+00:00'
+[2025-04-14T16:19:29.663+0300] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T16:19:29.676+0300] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-14T16:19:29.677+0300] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo Task C has Started! \n                        sleep 15 \n                        echo Task C has completed!']
+[2025-04-14T16:19:29.682+0300] {subprocess.py:99} INFO - Output:
+[2025-04-14T16:19:29.683+0300] {subprocess.py:106} INFO - Task C has Started!
+[2025-04-14T16:19:44.686+0300] {subprocess.py:106} INFO - Task C has completed!
+[2025-04-14T16:19:44.687+0300] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-14T16:19:44.708+0300] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T16:19:44.708+0300] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=executing_multiple_tasks, task_id=task_c, run_id=manual__2025-04-14T13:19:15.701802+00:00, execution_date=20250414T131915, start_date=20250414T131929, end_date=20250414T131944
+[2025-04-14T16:19:44.775+0300] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-14T16:19:44.791+0300] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T16:19:44.799+0300] {local_task_job_runner.py:245} INFO - ::endgroup::
