@@ -1,4 +1,4 @@
-Certainly! Here's a comprehensive `README.md` for your [Airflow GitHub repository](https://github.com/TasneemAhmed/airflow), aligning with the concepts covered in the [LinkedIn Learning course on Apache Airflow](https://www.linkedin.com/learning/learning-apache-airflow).
+Certainly! Here's a comprehensive `README.md` for your [Airflow GitHub repository](https://github.com/TasneemAhmed/airflow), aligning with the concepts covered in the [LinkedIn Learning course on Apache Airflow](https://www.linkedin.com/learning/learning-apache-airflow).
 
 Inside CourseMaterials/ you will find the exercise files attached to the LinkedIn course.
 ## 🏅 Certification
@@ -11,7 +11,7 @@ You can view my certificate of completion for the course [Learning Apache Airflo
 
 # Apache Airflow Learning Repository
 
-This repository contains hands-on examples and DAGs (Directed Acyclic Graphs) developed while following the [LinkedIn Learning course: Learning Apache Airflow](https://www.linkedin.com/learning/learning-apache-airflow). It covers fundamental concepts of Airflow, including architecture, task creation, dependencies, XComs, TaskGroups, scheduling, catchup, and backfill.
+This repository contains hands-on examples and DAGs (Directed Acyclic Graphs) developed while following the [LinkedIn Learning course: Learning Apache Airflow](https://www.linkedin.com/learning/learning-apache-airflow). It covers fundamental concepts of Airflow, including architecture, task creation, dependencies, XComs, TaskGroups, scheduling, catchup, and backfill.
 
 ## 📁 Repository Structure
 
